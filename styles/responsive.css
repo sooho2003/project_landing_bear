@@ -2,13 +2,26 @@
 /* Desktop 1250~1920 */
 /* Tablet 1249~850 */
 @media screen and (max-width:1249px){
+    /* ========================1행 intro */
     #wrap .intro {padding:0 80px;}
     #wrap .intro .container {width:100%;}
     #wrap .intro .container h1:nth-child(2) {font-size:3.125rem;}
     #wrap .intro .container .sponsor_btn {width:270px; line-height:62px; font-size:22px;}
     #wrap .intro .container .sponsor_question {width:333px; height:54px; font-size: 1.25rem;}
+    /* ==========================2행 quiz */
+    #wrap .quiz {padding:150px 80px;}
+    /* ==========================3행 video */
+    #wrap .ad .container {padding:200px 80px;}
 }
 /* Mobile 849~320 */
 @media screen and (max-width:849px){
     #wrap .intro {padding:0 15px;}
+    /* ==========================2행 quiz */
+    #wrap .quiz {padding:70px 15px;}
+    #wrap .quiz .container {grid-template-columns:1fr;}
+    #wrap .quiz .container #left_quiz {margin-bottom:50px;}
+    #wrap .quiz .container .right p:nth-child(1) img {width:70%;}
+    /* 3행 */
+    #wrap .ad .container {padding:50px 15px;}
+    #wrap .ad .container iframe {height:400px;}
 }
