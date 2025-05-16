@@ -112,11 +112,14 @@ body * {transition:all 0.5s;}
     padding:200px 0;
 }
 #wrap .ad .container {
-    width:1250px; margin:0 auto; text-align:center;
+    max-width:1250px;
+    min-width:320px; margin:0 auto; text-align:center;
     border:1px solid coral;
 }
-#wrap .ad .container h2 {}
-#wrap .ad .container iframe {width:100px; height:600px;}
+#wrap .ad .container h2 {
+    font-size:40px; font-weight:500; text-align: center; padding-left:196px; padding-right:196px;
+}
+#wrap .ad .container iframe {width:100%; height:600px; padding-top:70px;}
 #wrap .ad .container .sponsor_btn {
     display:block;
     width:409px; margin:100px auto 0;
@@ -128,6 +131,83 @@ body * {transition:all 0.5s;}
 }
 /* 4행====================빙하면적감소 */
 /* 5행====================인류재앙 */
+#wrap .disaster {
+    background:#F5F5F5;
+    padding:200px 0;
+}
+#wrap .disaster .container {
+    border:1px solid red;
+    max-width:1250px; min-width:320px;
+    /* 최소 320 ~ 최대 1250 사이 너비값은 가변형 세팅 */
+    /* (위) 큰 범위값 세팅 후 @media 규칙내에서 태블릿, 모바일에  맞는 레이아웃 재수정하며 반응형 제작*/
+    margin:0 auto;
+}
+#wrap .disaster .container h2 {
+    font-weight:500; text-align:center; font-size:55px; padding-left:154px; padding-right:154px;
+    padding-bottom:40px;
+}
+#wrap .disaster .container > p {
+    font-size:20px; text-align:center; font-weight:400; line-height:170%; padding:55px;
+}
+#wrap .disaster .container .list {
+    display:flex; flex-flow:row nowrap;
+    /* 옆으로 정렬하는 대상(li)의 부모(flex) */
+    /* flex의 기본값 자식요소들을 옆으로 정렬(기본값) */
+    gap:20px;
+}
+#wrap .disaster .container .list li {
+    background:#fff;
+    flex:1;
+}
+#wrap .disaster .container .list li .bg {
+    height:320px;
+    background-position:0 55%;
+    background-size:cover;
+    position:relative;
+}
+#wrap .disaster .container .list li .bg::before {
+    content:''; display:block; z-index:50;
+    position:absolute; left:0; top:0; width:100%; height:100%;
+    /* (위) content~height속성까지 before 또는 after 가상요소 사용 시 필수속성 모음 */
+    background:linear-gradient(#000 10%, transparent 60%);
+    /* background:linear-gradient(#첫번째색상 위치%, #두번째색상 위치%); */
+}
+#wrap .disaster .container .list li .bg h3 {
+    color:#fff; position:relative; z-index:60; font-size:43px; text-align:center;
+    padding-top:40px;
+    font-weight:700;
+    /* z-index속성은 position속성이 선행되어야만 사용할 수 있는 중첩순서이다. */
+}
+#wrap .disaster .container .list li .bg p {
+    color:#fff; position:relative; z-index:60; font-size:20px; padding:30px; text-align:center;
+}
+#wrap .disaster .container .list li > p {
+    height:250px;
+    font-size:1.25rem;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:60px;
+    padding-left:20px;
+    padding-right:20px;
+    line-height:170%;
+}
+/* 5행 개별 배경 선택자 */
+#wrap .disaster .container .list li:nth-child(1) .bg {
+    background-image:url(../images/28.png);
+    background-position:0 80%;
+    background-size:cover;
+
+}
+#wrap .disaster .container .list li:nth-child(2) .bg {
+    background-image:url(../images/27.png);
+    background-position:0 75%;
+    background-size:cover;
+}
+#wrap .disaster .container .list li:nth-child(3) .bg {
+    background-image:url(../images/wwf.jpg);
+    background-position:0 55%;
+    background-size:cover;
+}
 /* 6행====================지구위기 */
 /* 7행====================WWF단체홍보 */
 /* 8행====================다양한활동 */

@@ -12,6 +12,14 @@
     #wrap .quiz {padding:150px 80px;}
     /* ==========================3행 video */
     #wrap .ad .container {padding:200px 80px;}
+    #wrap .disaster .container .list li .bg h3 {
+        font-size: 40px;
+        font-weight:500;
+    }
+    /* -------------------------------------5행 인류재앙 */
+    #wrap .disaster {padding:200px 80px;}
+    #wrap .disaster .container .list li > p {
+        font-size:16px;}
 }
 /* Mobile 849~320 */
 @media screen and (max-width:849px){
@@ -24,4 +32,9 @@
     /* 3행 */
     #wrap .ad .container {padding:50px 15px;}
     #wrap .ad .container iframe {height:400px;}
+    /* 5행 */
+    #wrap .disaster {padding:70px 15px;}
+    #wrap .disaster .container .list {flex-flow:column nowrap;}
+    #wrap .disaster .container .list li .bg {height:150px;}
+    #wrap .disaster .container .list li > p {height:max-content;}
 }
